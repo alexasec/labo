@@ -2,17 +2,33 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/HTML; charset=Shift_JIS">
-<link href="smp01.css" type="text/css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link rel="stylesheet" href="smp01.css">
+<link rel="stylesheet" href="normalize.css">
+<link rel="stylesheet" href="main.css">
 <script>
 //=========================================================
 //初期処理
 //=========================================================
 function start(){
+  if('serviceWorker' in navigator) {
+      navigator.serviceWorker
+               .register('/sw.js')
+               .then(function() { console.log("Service Worker Registered"); })
+               .catch(function() { console.log("Service Worker Not Registered"); });
+    }
 }
 </script>
 </head>
 <body onload="start()">
+<header class="page-header" role="banner">
   <h1>サンプル</h1>
-  <p>ドキュメントの内容</p>
+</header>
+  <div class="page-main" role="main">
+    <div id="typo">
+      <div class="inner">PWA Sample</div>
+    </div>
+  </div>
 </body>
 </html>
