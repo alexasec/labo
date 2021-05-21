@@ -17,20 +17,58 @@ function start(){
                .catch(function() { console.log("Service Worker Not Registered"); });
   }
 }
+
+//=========================================================
+//保存処理
+//=========================================================
+function SaveKeyValue() {
+  if (window.localStorage != null) {
+      key = document.forms.form1.Text_key.value;
+      value = document.forms.form1.Text_value.value;
+
+      window.localStorage.setItem(key,value);
+  }
+}
+
+//=========================================================
+//読み込み処理
+//=========================================================
+function LoadKeyValue() {
+    if (!window.localStorage != null) {
+        key = document.forms.form1.Text_key.value;
+        value = window.localStorage.getItem(key)
+        document.forms.form1.Text_value.value=value;
+    }
+}
+
+//=========================================================
+//削除処理
+//=========================================================
+function RemoveKeyValue() {
+    if (!window.localStorage != null) {
+        key = document.forms.form1.Text_key.value;
+        window.localStorage.removeItem(key);
+    }
+}
+
+//=========================================================
+//全クリ処理
+//=========================================================
+function ClearKeyValue() {
+    if (!window.localStorage != null) {
+        window.localStorage.clear();
+    }
+}
 </script>
 </head>
 <body onload="start()">
-<div class="memoApp">
-  <div class="memoForm">
-    <input type="text" id="title" class="form-control" placeholder="タイトル" />
-    <textarea class="form-control" rows="3" placeholder="本文" id="body"></textarea>
-    <button type="button" class="btn btn-primary btn-block" id="btnAdd">追加</button>
-  </div>
-
-  <div id="memoArea">
-  </div>
-
-  <button type="button" class="btn btn-primary btn-block" id="btnReset">リセット</button>
-</div>
+  <form id="form1">
+    Key <input id="Text_key" type="text" /><br/>
+    Value <input id="Text_value" type="text" /><br />
+    <input id="Button1" type="button" value="保存" onclick="SaveKeyValue()" /><br/>
+    <input id="Button2" type="button" value="読み込み" onclick="LoadKeyValue()" /><br />
+    <input id="Button3" type="button" value="削除" onclick = "RemoveKeyValue()" /><br />
+    <input id="Button4" type="button" value="すべてクリア" onclick="ClearKeyValue()" /><br />
+  </form>
 </body>
 </html>
