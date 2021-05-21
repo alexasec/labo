@@ -59,6 +59,12 @@ function ClearKeyValue() {
         window.localStorage.clear();
     }
 }
+//=========================================================
+//別ページへ
+//=========================================================
+function nextpage() {
+  location.href="SMP02.htm"
+}
 </script>
 </head>
 <body onload="start()">
@@ -69,6 +75,8 @@ function ClearKeyValue() {
     <input id="Button2" type="button" value="読み込み" onclick="LoadKeyValue()" /><br />
     <input id="Button3" type="button" value="削除" onclick = "RemoveKeyValue()" /><br />
     <input id="Button4" type="button" value="すべてクリア" onclick="ClearKeyValue()" /><br />
+    <br><br>
+    <button class="btn1" onclick="nextpage()">別のページへ</button>
   </form>
 </body>
 </html>
