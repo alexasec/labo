@@ -23,3 +23,9 @@ body {
   color:#ffffff;
   background-color:#ed8497;
 }
+/*p 装飾*/
+p {
+  font-size:20pt; 
+  color:#527552;
+  padding:center
+}
