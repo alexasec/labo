@@ -20,13 +20,17 @@ function start(){
 </script>
 </head>
 <body onload="start()">
-<header class="page-header" role="banner">
-  <h1>サンプル</h1>
-</header>
-  <div class="page-main" role="main">
-    <div id="typo">
-      <div class="inner">PWA Sample</div>
-    </div>
+<div class="memoApp">
+  <div class="memoForm">
+    <input type="text" id="title" class="form-control" placeholder="タイトル" />
+    <textarea class="form-control" rows="3" placeholder="本文" id="body"></textarea>
+    <button type="button" class="btn btn-primary btn-block" id="btnAdd">追加</button>
   </div>
+
+  <div id="memoArea">
+  </div>
+
+  <button type="button" class="btn btn-primary btn-block" id="btnReset">リセット</button>
+</div>
 </body>
 </html>
