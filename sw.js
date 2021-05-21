@@ -1,3 +1,5 @@
+//参考ページ https://qiita.com/masanarih0ri/items/0845f312cff5c8d0ec60  //
+
 const STATIC_DATA = [
   'index.html',
   'smp01.css'
