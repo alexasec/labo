@@ -1,6 +1,2 @@
-h1 {
-  color: #f00;
-}
-.inner {
-  color: #4800ff;
-}
+.memoApp{max-width: 375px;margin:0 auto 20px;}
+.memoApp input,.memoApp textarea,.memoApp button{margin-bottom: 10px;}
