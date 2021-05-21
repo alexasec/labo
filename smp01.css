@@ -1,2 +1,25 @@
-.memoApp{max-width: 375px;margin:0 auto 20px;}
-.memoApp input,.memoApp textarea,.memoApp button{margin-bottom: 10px;}
+/*body共通*/
+body {
+  background-color:#f5f5f5;
+  color:#4b4b4b;
+  MARGIN: 0px; 
+  padding: 0; 
+  border: none;
+}
+/*button設定用*/
+.btn1 {
+  font-size: 10pt;
+  font-weight: bold;
+  color:#ffffff;
+  background-color:#c60024;
+  padding:6px 10px;
+  border:none;
+  cursor: pointer;
+  border-radius: 0.2em;
+  transition: background 0.2s ease-in-out;
+}
+/*buttonオンマウス設定用*/
+.btn1:hover {
+  color:#ffffff;
+  background-color:#ed8497;
+}
