@@ -2,12 +2,13 @@
 
 const STATIC_DATA = [
   'index.html',
+  'smp02.htm',
   'smp01.css'
 ];
 
 self.addEventListener('install', function(e) {
  e.waitUntil(
-   caches.open('cache_v1').then(function(cache) {
+   caches.open('cache_v1.1').then(function(cache) {
      return cache.addAll(STATIC_DATA);
    })
  );
