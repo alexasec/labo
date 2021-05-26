@@ -8,7 +8,7 @@ const STATIC_DATA = [
 
 self.addEventListener('install', function(e) {
  e.waitUntil(
-   caches.open('cache_v1.1').then(function(cache) {
+   caches.open('cache_v1.2').then(function(cache) {
      return cache.addAll(STATIC_DATA);
    })
  );
